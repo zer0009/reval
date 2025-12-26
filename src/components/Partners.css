@@ -141,13 +141,40 @@
     padding: 3rem 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
+  .partners-header {
+    margin-bottom: 3rem;
+  }
+
   .partners-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .lightning-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .partners-subtitle {
-    font-size: 1rem;
-    padding: 0 1rem;
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+
+  .partners-cables-section,
+  .partners-panels-section,
+  .partners-wiring-section,
+  .partners-pvc-section,
+  .partners-emt-section,
+  .partners-data-cables-section,
+  .partners-insulation-section,
+  .partners-air-conditioning-section {
+    margin-top: 3rem;
   }
 
   .cables-title,
@@ -158,11 +185,26 @@
   .data-cables-title,
   .insulation-title,
   .air-conditioning-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .cables-title .lightning-icon,
+  .panels-title .lightning-icon,
+  .wiring-title .lightning-icon,
+  .pvc-title .lightning-icon,
+  .emt-title .lightning-icon,
+  .data-cables-title .lightning-icon,
+  .insulation-title .lightning-icon,
+  .air-conditioning-title .lightning-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .partners-logos-grid {
-    gap: 1.5rem;
+    gap: 1.25rem;
+    padding: 0.5rem 0;
   }
 
   .partner-logo-card {

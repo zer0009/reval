@@ -97,27 +97,46 @@
     padding: 3rem 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .contact-card {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .contact-icon-wrapper {
     width: 48px;
     height: 48px;
+    margin-bottom: 1.25rem;
   }
 
   .contact-card-title {
     font-size: 1.1rem;
+    margin-bottom: 1.25rem;
   }
 
-  .contact-info,
-  .contact-link {
+  .contact-info-wrapper {
+    gap: 0.6rem;
+  }
+
+  .contact-info {
     font-size: 0.9rem;
+  }
+
+  .contact-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
   }
 }
 

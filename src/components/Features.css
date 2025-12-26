@@ -61,13 +61,36 @@
     padding: 3rem 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .feature-card {
-    padding: 2rem;
+    padding: 1.75rem;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
   }
 }
 

@@ -106,17 +106,27 @@
     padding: 3rem 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 2rem;
   }
 
   .about-paragraph {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 1.25rem;
   }
 
   .about-wrapper {
     gap: 2rem;
+  }
+
+  .about-image-wrapper {
+    max-width: 100%;
   }
 }
 

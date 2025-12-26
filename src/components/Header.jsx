@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { content } from '../data/content'
 import './Header.css'
@@ -5,11 +6,13 @@ import './Header.css'
 const Header = () => {
   const { language, toggleLanguage } = useLanguage()
   const t = content[language]
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+      setMobileMenuOpen(false)
     }
   }
 
@@ -27,7 +30,16 @@ const Header = () => {
             }}
           />
         </div>
-        <nav className="nav">
+        <button 
+          className="mobile-menu-toggle"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={mobileMenuOpen ? 'open' : ''}></span>
+          <span className={mobileMenuOpen ? 'open' : ''}></span>
+          <span className={mobileMenuOpen ? 'open' : ''}></span>
+        </button>
+        <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
           <button onClick={() => scrollToSection('home')} className="nav-link">
             {t.nav.home}
           </button>
