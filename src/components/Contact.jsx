@@ -21,7 +21,6 @@ const Contact = () => {
             <div className="contact-info-wrapper">
               <p className="contact-info">{t.contact.address.line1}</p>
               <p className="contact-info">{t.contact.address.line2}</p>
-              <p className="contact-info">{t.contact.address.line3}</p>
             </div>
           </div>
           <div className="contact-card">

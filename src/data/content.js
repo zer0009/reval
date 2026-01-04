@@ -14,6 +14,7 @@ export const content = {
       mission: 'رسالتنا',
       features: 'مميزاتنا',
       clients: 'عملاؤنا',
+      brands: 'العلامات التجارية',
       contact: 'اتصل بنا'
     },
     hero: {
@@ -77,13 +78,16 @@ export const content = {
       insulationTitle: 'اكسسوارات العزل / Insulation Accessories',
       airConditioningTitle: 'اعمال التكييف / Air Conditioning'
     },
+    brands: {
+      title: 'العلامات التجارية',
+      subtitle: 'نقدم لكم مجموعة واسعة من أفضل العلامات التجارية العالمية في مجال التوريدات الكهربائية'
+    },
     contact: {
       title: 'اتصل بنا',
       address: {
         title: 'العنوان',
-        line1: '19 شارع علي الخياط، حدائق القبة، القاهرة',
-        line2: '18 شارع جسر السويس (برج الزهور)',
-        line3: 'امام ادارة التراخيص و التفتيش العسكرية - مصر الجديدة - القاهرة'
+        line1: '18 شارع جسر السويس (برج الزهور)',
+        line2: 'امام ادارة التراخيص و التفتيش العسكرية - مصر الجديدة - القاهرة'
       },
       phone: {
         title: 'الهاتف',
@@ -114,6 +118,7 @@ export const content = {
       mission: 'Mission',
       features: 'Features',
       clients: 'Clients',
+      brands: 'Brands',
       contact: 'Contact'
     },
     hero: {
@@ -177,13 +182,16 @@ export const content = {
       insulationTitle: 'Insulation Accessories',
       airConditioningTitle: 'Air Conditioning'
     },
+    brands: {
+      title: 'Our Brands',
+      subtitle: 'We offer a wide range of the world\'s finest electrical supply brands'
+    },
     contact: {
       title: 'Contact Us',
       address: {
         title: 'Address',
-        line1: '19 Ali Al-Khayat Street, Hadayek El-Qobba, Cairo',
-        line2: '18 Gesr El Suez Street (Al-Zahour Tower)',
-        line3: 'In front of the Military Licensing and Inspection Department - Heliopolis - Cairo'
+        line1: '18 Gesr El Suez Street (Al-Zahour Tower)',
+        line2: 'In front of the Military Licensing and Inspection Department - Heliopolis - Cairo'
       },
       phone: {
         title: 'Phone',

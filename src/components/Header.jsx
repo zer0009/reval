@@ -55,6 +55,9 @@ const Header = () => {
           <button onClick={() => scrollToSection('partners')} className="nav-link">
             {language === 'ar' ? 'شركاؤنا' : 'Partners'}
           </button>
+          <button onClick={() => scrollToSection('brands')} className="nav-link">
+            {t.nav.brands}
+          </button>
           <button onClick={() => scrollToSection('contact')} className="nav-link">
             {t.nav.contact}
           </button>

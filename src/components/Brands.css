@@ -1,0 +1,190 @@
+.brands {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.brands .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brands-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.brands-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FF6600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.lightning-icon {
+  width: 32px;
+  height: 32px;
+  color: #FF6600;
+  flex-shrink: 0;
+}
+
+.brands-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-section {
+  margin-top: 4rem;
+}
+
+.brand-section:first-of-type {
+  margin-top: 0;
+}
+
+.brand-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FF6600;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.brand-section-title .lightning-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.brand-images-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-images-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* When there are 5 or more images, allow left-aligned scrolling */
+.brand-images-scroll:has(.brand-image-card:nth-child(5)) {
+  justify-content: flex-start;
+}
+
+.brand-images-center {
+  justify-content: center;
+}
+
+.brand-image-card {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  min-width: 180px;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.brand-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.15);
+  border-color: #FF6600;
+  background: #ffffff;
+}
+
+.brand-image {
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.brand-image-card:hover .brand-image {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .brands {
+    padding: 3rem 0;
+  }
+
+  .brands .container {
+    padding: 0 1rem;
+  }
+
+  .brands-header {
+    margin-bottom: 3rem;
+  }
+
+  .brands-title {
+    font-size: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .lightning-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .brands-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .brand-section {
+    margin-top: 3rem;
+  }
+
+  .brand-section-title {
+    font-size: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .brand-section-title .lightning-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand-images-scroll {
+    gap: 1.25rem;
+    padding: 0.5rem 0;
+  }
+
+  .brand-image-card {
+    padding: 1.2rem;
+    min-height: 120px;
+    min-width: 150px;
+  }
+
+  .brand-image {
+    max-height: 100px;
+  }
+}
