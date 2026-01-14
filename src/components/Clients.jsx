@@ -9,17 +9,17 @@ const Clients = () => {
   // Company logos from the companies folder
   const companyLogos = [
     '/assets/companies/1543762122_316_6398_logo1-231x70.png',
-    '/assets/companies/1630493914136.jfif',
-    '/assets/companies/1669229788958.jfif',
-    '/assets/companies/9310175536582f1e5e9faa-og.webp',
+    '/assets/companies/1630493914136.png',
+    '/assets/companies/1669229788958.png',
+    '/assets/companies/9310175536582f1e5e9faa.png',
     '/assets/companies/ALGAMMAL-CONTRACTING-LOGO-GD-AGCC-new.jpg',
-    '/assets/companies/arabia_holding_logo.jfif',
-    '/assets/companies/c9.webp',
+    '/assets/companies/arabia_holding_logo.png',
+    '/assets/companies/c9.png',
     '/assets/companies/ccc-logo-header.svg',
     '/assets/companies/global.jpg',
     '/assets/companies/Group-738-1.webp',
-    '/assets/companies/hassan_allam_holding_logo.jfif',
-    '/assets/companies/IMG-20250218-WA0051.jpg',
+    '/assets/companies/hassan_allam_holding_logo.png',
+    '/assets/companies/IMG-20250218-WA0051.png',
     '/assets/companies/logo.png',
     '/assets/companies/Newest-FMPlus-company-profile-edited-Photoroom.webp'
   ]
