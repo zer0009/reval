@@ -25,9 +25,7 @@
 @media (max-width: 768px) {
   .footer {
     padding: 1.5rem 0;
-  }
-
-  .footer .container {
+  }  .footer .container {
     padding: 0 1rem;
   }
 

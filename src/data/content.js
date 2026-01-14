@@ -91,7 +91,7 @@ export const content = {
       },
       phone: {
         title: 'الهاتف',
-        numbers: ['01099529641', '01080796361']
+        numbers: ['01099529641', '0222570970']
       },
       email: {
         title: 'البريد الإلكتروني',
@@ -195,7 +195,7 @@ export const content = {
       },
       phone: {
         title: 'Phone',
-        numbers: ['01099529641', '01080796361']
+        numbers: ['01099529641', '0222570970']
       },
       email: {
         title: 'Email',

@@ -32,17 +32,15 @@ const Clients = () => {
         <div className="clients-grid">
           {companyLogos.map((logo, index) => (
             <div key={index} className="client-card">
-              <div className="client-logo-placeholder">
-                <img
-                  src={logo}
-                  alt={`Client ${index + 1}`}
-                  className="client-logo"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                  }}
-                />
-              </div>
+              <img
+                src={logo}
+                alt={`Client ${index + 1}`}
+                className="client-logo"
+                loading="lazy"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
+              />
             </div>
           ))}
         </div>
