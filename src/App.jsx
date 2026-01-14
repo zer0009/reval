@@ -1,4 +1,5 @@
 import { LanguageProvider } from './context/LanguageContext'
+import { BrandProvider } from './context/BrandContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -13,18 +14,20 @@ import WhatsAppButton from './components/WhatsAppButton'
 function App() {
   return (
     <LanguageProvider>
-      <div className="App">
-        <Header />
-        <Hero />
-        <About />
-        <Features />
-        <Clients />
-        <Partners />
-        <Brands />
-        <Contact />
-        <Footer />
-        <WhatsAppButton />
-      </div>
+      <BrandProvider>
+        <div className="App">
+          <Header />
+          <Hero />
+          <About />
+          <Features />
+          <Clients />
+          <Partners />
+          <Brands />
+          <Contact />
+          <Footer />
+          <WhatsAppButton />
+        </div>
+      </BrandProvider>
     </LanguageProvider>
   )
 }

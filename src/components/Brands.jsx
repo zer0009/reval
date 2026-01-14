@@ -1,10 +1,14 @@
+import { useEffect, useRef } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import { useBrand } from '../context/BrandContext'
 import { content } from '../data/content'
 import './Brands.css'
 
 const Brands = () => {
   const { language } = useLanguage()
+  const { selectedBrand, clearBrand } = useBrand()
   const t = content[language]
+  const brandSectionRef = useRef(null)
 
   // Brand data - Schneider first as requested
   const brands = [
@@ -117,6 +121,23 @@ const Brands = () => {
     }
   ]
 
+  // Filter brands based on selection
+  const filteredBrands = selectedBrand 
+    ? brands.filter(brand => brand.name === selectedBrand)
+    : brands
+
+  // Scroll to the selected brand section when it changes
+  useEffect(() => {
+    if (selectedBrand && brandSectionRef.current) {
+      setTimeout(() => {
+        brandSectionRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        })
+      }, 300)
+    }
+  }, [selectedBrand])
+
   return (
     <section className="brands" id="brands">
       <div className="container">
@@ -128,10 +149,24 @@ const Brands = () => {
             {t.brands.title}
           </h2>
           <p className="brands-subtitle">{t.brands.subtitle}</p>
+          {selectedBrand && (
+            <div className="brand-filter-indicator">
+              <span>
+                {language === 'ar' ? `عرض: ${selectedBrand}` : `Showing: ${selectedBrand}`}
+              </span>
+              <button onClick={() => clearBrand()} className="clear-filter-btn">
+                {language === 'ar' ? 'عرض الكل' : 'Show All'}
+              </button>
+            </div>
+          )}
         </div>
 
-        {brands.map((brand, index) => (
-          <div key={index} className={`brand-section brand-${brand.folder.toLowerCase().replace(/\s+/g, '-')}-section`}>
+        {filteredBrands.map((brand, index) => (
+          <div 
+            key={index} 
+            ref={selectedBrand === brand.name ? brandSectionRef : null}
+            className={`brand-section brand-${brand.folder.toLowerCase().replace(/\s+/g, '-')}-section ${selectedBrand === brand.name ? 'brand-selected' : ''}`}
+          >
             <h3 className="brand-section-title">
               <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>

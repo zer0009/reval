@@ -1,10 +1,65 @@
 import { useLanguage } from '../context/LanguageContext'
+import { useBrand } from '../context/BrandContext'
 import { content } from '../data/content'
 import './Partners.css'
 
 const Partners = () => {
   const { language } = useLanguage()
+  const { selectBrand } = useBrand()
   const t = content[language]
+
+  // Available brand names
+  const availableBrands = [
+    'Schneider Electric',
+    'ABB',
+    'Legrand',
+    'BTicino',
+    'CHINT',
+    '3M',
+    'Elios',
+    'Elsewedy',
+    'Engineering Home'
+  ]
+
+  // Function to detect brand name from logo path/filename
+  const detectBrandFromLogo = (logoPath) => {
+    const filename = logoPath.toLowerCase()
+    
+    // Direct mappings based on filename patterns
+    if (filename.includes('elsewedy')) return 'Elsewedy'
+    if (filename.includes('3m') || filename.includes('3-m')) return '3M'
+    if (filename.includes('schneider')) return 'Schneider Electric'
+    if (filename.includes('abb')) return 'ABB'
+    if (filename.includes('legrand')) return 'Legrand'
+    if (filename.includes('bticino')) return 'BTicino'
+    if (filename.includes('chint')) return 'CHINT'
+    if (filename.includes('elios')) return 'Elios'
+    if (filename.includes('engineering') || filename.includes('home')) return 'Engineering Home'
+    
+    // Manual mappings for specific logos (you can expand this)
+    const manualMap = {
+      '/assets/cables/Elsewedy_Electric_Logo.svg.png': 'Elsewedy',
+      '/assets/data_cables/Elsewedy_Electric_Logo.svg.png': 'Elsewedy',
+      '/assets/insulation/426-4264739_3m-logo-cmyk-3m-logo.png': '3M',
+      '/assets/insulation/5F4B5882-0D03-4A78-A854-278E9365F91F__36543-1259x1280.png': '3M',
+    }
+    
+    return manualMap[logoPath] || null
+  }
+
+  const handleLogoClick = (logoPath) => {
+    const brandName = detectBrandFromLogo(logoPath)
+    if (brandName) {
+      selectBrand(brandName)
+      // Scroll to brands section
+      setTimeout(() => {
+        const brandsSection = document.getElementById('brands')
+        if (brandsSection) {
+          brandsSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }
 
   const cablesLogos = [
     '/assets/cables/cabel_01.png',
@@ -92,7 +147,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {cablesLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Cable Partner ${index + 1}`}
@@ -112,7 +172,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {panelsLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Panel Partner ${index + 1}`}
@@ -132,7 +197,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {wiringLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Wiring Partner ${index + 1}`}
@@ -152,7 +222,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {pvcLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`PVC Partner ${index + 1}`}
@@ -172,7 +247,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {emtLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`EMT Partner ${index + 1}`}
@@ -192,7 +272,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {dataCablesLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Data Cable Partner ${index + 1}`}
@@ -212,7 +297,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {insulationLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Insulation Partner ${index + 1}`}
@@ -232,7 +322,12 @@ const Partners = () => {
           </h3>
           <div className="partners-logos-grid">
             {airConditioningLogos.map((logo, index) => (
-              <div key={index} className="partner-logo-card">
+              <div 
+                key={index} 
+                className="partner-logo-card"
+                onClick={() => handleLogoClick(logo)}
+                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
+              >
                 <img 
                   src={logo} 
                   alt={`Air Conditioning Partner ${index + 1}`}
