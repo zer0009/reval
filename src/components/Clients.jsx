@@ -21,7 +21,8 @@ const Clients = () => {
     '/assets/companies/hassan_allam_holding_logo.png',
     '/assets/companies/IMG-20250218-WA0051.png',
     '/assets/companies/logo.png',
-    '/assets/companies/Newest-FMPlus-company-profile-edited-Photoroom.webp'
+    '/assets/companies/Newest-FMPlus-company-profile-edited-Photoroom.webp',
+    '/assets/companies/acrow.png'
   ]
 
   return (

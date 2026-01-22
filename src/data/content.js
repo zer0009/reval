@@ -54,6 +54,30 @@ export const content = {
         }
       ]
     },
+    statistics: {
+      items: [
+        {
+          icon: '👥',
+          label: 'عدد العملاء',
+          value: 64
+        },
+        {
+          icon: '🏗️',
+          label: 'المشاريع',
+          value: 163
+        },
+        {
+          icon: '⏰',
+          label: 'دعم فني',
+          text: '24/7'
+        },
+        {
+          icon: '⭐',
+          label: 'سنوات الخبرة',
+          value: 4
+        }
+      ]
+    },
     clients: {
       title: 'عملاؤنا',
       subtitle: 'نفخر بتقديم خدماتنا لكبرى الشركات',
@@ -95,7 +119,7 @@ export const content = {
       },
       email: {
         title: 'البريد الإلكتروني',
-        address: 'revalforelectric@gmail.com'
+        address: 'info@reval-eg.com'
       }
     },
     footer: {
@@ -158,6 +182,30 @@ export const content = {
         }
       ]
     },
+    statistics: {
+      items: [
+        {
+          icon: '👥',
+          label: 'Clients',
+          value: 64
+        },
+        {
+          icon: '🏗️',
+          label: 'Projects',
+          value: 163
+        },
+        {
+          icon: '⏰',
+          label: 'Technical Support',
+          text: '24/7'
+        },
+        {
+          icon: '⭐',
+          label: 'Years of Experience',
+          value: 4
+        }
+      ]
+    },
     clients: {
       title: 'Our Clients',
       subtitle: 'We are proud to serve major companies',
@@ -199,7 +247,7 @@ export const content = {
       },
       email: {
         title: 'Email',
-        address: 'revalforelectric@gmail.com'
+        address: 'info@reval-eg.com'
       }
     },
     footer: {

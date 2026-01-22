@@ -2,6 +2,7 @@ import { LanguageProvider } from './context/LanguageContext'
 import { BrandProvider } from './context/BrandContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Statistics from './components/Statistics'
 import About from './components/About'
 import Features from './components/Features'
 import Clients from './components/Clients'
@@ -18,6 +19,7 @@ function App() {
         <div className="App">
           <Header />
           <Hero />
+          <Statistics />
           <About />
           <Features />
           <Clients />
