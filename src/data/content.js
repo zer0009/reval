@@ -27,7 +27,17 @@ export const content = {
       paragraph1: 'تأسست شركة ريفال لتوريد المواد الكهربائية عام 2022 لتكون أحد الكيانات الرائدة في مجال التوريدات الكهربائية داخل السوق المصري.',
       paragraph2: 'ومنذ انطلاقها، التزمت الشركة بتقديم حلول متكاملة تتميز بالجودة العالية، والالتزام بالمواصفات الفنية، والدقة في التنفيذ، مع التركيز الدائم على تحقيق رضا العملاء وبناء شراكات طويلة الأمد تقوم على الثقة والمصداقية.',
       paragraph3: 'تعمل ريفال على توفير جميع احتياجات المشاريع من المواد والمستلزمات الكهربائية من أرقى العلامات التجارية المحلية والعالمية، مع الحفاظ على معايير الأداء العالية وسرعة الاستجابة لاحتياجات السوق.',
-      paragraph4: 'وقد استطاعت الشركة أن تكسب ثقة كبرى الشركات والمؤسسات من خلال التزامها بالاحترافية، والمرونة، والتنافسية في الأسعار.'
+      paragraph4: 'وقد استطاعت الشركة أن تكسب ثقة كبرى الشركات والمؤسسات من خلال التزامها بالاحترافية، والمرونة، والتنافسية في الأسعار.',
+      servicesTitle: 'خدماتنا',
+      servicesIntro: 'تقوم أيضاً شركة ريفال بتنفيذ أعمال التركيبات الكهربائية المتكاملة للمنشآت المختلفة وأعمال التكييف، مع الالتزام بالمواصفات الفنية ومعايير السلامة والجودة، وتشمل خدماتنا على سبيل المثال لا الحصر:',
+      services: [
+        'تركيب اللوحات الكهربائية الرئيسية والفرعية وتوزيع الأحمال داخل المواقع.',
+        'تنفيذ تمديدات الكهرباء الداخلية والخارجية (إنارة – قوى – مخارج خاصة للمعدات).',
+        'توريد وتركيب قواطع، كابلات، أسلاك، مجاري كابلات (Trays & Trunks) وجميع مُلحقات التركيبات.',
+        'أعمال التركيبات الخاصة بأنظمة التكييف (توريد وتركيب وحدات التكييف، تمديد مواسير النحاس، الصرف، الكابلات المغذية).',
+        'اختبار وتشغيل الأنظمة بعد التركيب (Testing & Commissioning) مع تسليم تقارير فنية معتمدة.',
+        'تقديم حلول فنية بديلة واقتراحات تحسين لتقليل التكلفة مع الحفاظ على الكفاءة والأمان.'
+      ]
     },
     vision: {
       title: 'رؤيتنا',
@@ -155,7 +165,17 @@ export const content = {
       paragraph1: 'Reval Electrical Supplies was established in 2022 as one of the leading companies in the field of electrical material supplies within the Egyptian market.',
       paragraph2: 'Since its inception, the company has been committed to providing comprehensive solutions distinguished by high quality, strict adherence to technical specifications, and precision in execution, with a constant focus on achieving customer satisfaction and building long-term partnerships based on trust and credibility.',
       paragraph3: 'Reval provides all project requirements of electrical materials and components from top local and international brands, maintaining high performance standards and a prompt response to market needs.',
-      paragraph4: 'Through its commitment to professionalism, flexibility, and competitive pricing, the company has earned the trust of major contractors and engineering firms across Egypt.'
+      paragraph4: 'Through its commitment to professionalism, flexibility, and competitive pricing, the company has earned the trust of major contractors and engineering firms across Egypt.',
+      servicesTitle: 'Our Services',
+      servicesIntro: 'Reval also executes integrated electrical installation works for various facilities and air conditioning works, adhering to technical specifications, safety standards, and quality. Our services include, but are not limited to:',
+      services: [
+        'Installation of main and sub electrical panels and load distribution within sites.',
+        'Execution of internal and external electrical extensions (lighting – power – special outlets for equipment).',
+        'Supply and installation of breakers, cables, wires, cable trays (Trays & Trunks), and all installation accessories.',
+        'Installation works for air conditioning systems (supply and installation of AC units, copper pipe extensions, drainage, feeder cables).',
+        'Testing and commissioning of systems after installation (Testing & Commissioning) with delivery of certified technical reports.',
+        'Providing alternative technical solutions and improvement suggestions to reduce costs while maintaining efficiency and safety.'
+      ]
     },
     vision: {
       title: 'Our Vision',

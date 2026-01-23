@@ -13,7 +13,12 @@ const About = () => {
         <div className="about-wrapper">
           <div className="about-image-container">
             <div className="about-image-wrapper">
-              <img src="/assets/02.jpeg" alt="Reval Electrical Supplies" className="about-image" />
+              <img 
+                src="/assets/02.jpeg" 
+                alt={language === 'ar' ? 'شركة ريفال للتوريدات الكهربائية والمقاولات - من نحن' : 'Reval Electrical Supplies & Contracting Company - About Us'} 
+                className="about-image"
+                loading="lazy"
+              />
               <div className="about-image-overlay"></div>
             </div>
           </div>
@@ -24,6 +29,19 @@ const About = () => {
             <p className="about-paragraph">{t.about.paragraph4}</p>
           </div>
         </div>
+
+        {/* Services Section */}
+        {t.about.servicesTitle && (
+          <div className="about-services-section">
+            <h3 className="services-title">{t.about.servicesTitle}</h3>
+            <p className="services-intro">{t.about.servicesIntro}</p>
+            <ul className="services-list">
+              {t.about.services.map((service, index) => (
+                <li key={index} className="service-item">{service}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Vision and Mission Section */}
         <div className="vision-mission-section">

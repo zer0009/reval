@@ -1,5 +1,6 @@
 import { LanguageProvider } from './context/LanguageContext'
 import { BrandProvider } from './context/BrandContext'
+import SEO from './components/SEO'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Statistics from './components/Statistics'
@@ -16,15 +17,16 @@ function App() {
   return (
     <LanguageProvider>
       <BrandProvider>
+        <SEO />
         <div className="App">
           <Header />
           <Hero />
-          <Statistics />
           <About />
+          <Statistics />
           <Features />
           <Clients />
           <Partners />
-          <Brands />
+          {/* <Brands /> */}
           <Contact />
           <Footer />
           <WhatsAppButton />

@@ -35,7 +35,10 @@ const Clients = () => {
             <div key={index} className="client-card">
               <img
                 src={logo}
-                alt={`Client ${index + 1}`}
+                alt={language === 'ar' 
+                  ? `شريك ${t.clients.title} - ${logo.split('/').pop().replace(/\.(png|jpg|jpeg|svg|webp)$/i, '')}`
+                  : `${t.clients.title} Partner - ${logo.split('/').pop().replace(/\.(png|jpg|jpeg|svg|webp)$/i, '')}`
+                }
                 className="client-logo"
                 loading="lazy"
                 onError={(e) => {
