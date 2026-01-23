@@ -13,6 +13,21 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Preload hero background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-image: url('/assets/01.jpeg');
+  opacity: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {

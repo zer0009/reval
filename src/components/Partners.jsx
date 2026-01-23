@@ -157,6 +157,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Cable Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -182,6 +186,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Panel Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -207,6 +215,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Wiring Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -232,6 +244,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`PVC Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -257,6 +273,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`EMT Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -282,6 +302,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Data Cable Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -307,6 +331,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Insulation Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -332,6 +360,10 @@ const Partners = () => {
                   src={logo} 
                   alt={`Air Conditioning Partner ${index + 1}`}
                   className="partner-logo"
+                  width="210"
+                  height="140"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

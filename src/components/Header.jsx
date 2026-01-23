@@ -24,6 +24,11 @@ const Header = () => {
             src="/assets/Logo.png" 
             alt={t.companyName} 
             className="logo-image"
+            width="143"
+            height="70"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             onError={(e) => {
               console.error('Logo failed to load:', e.target.src)
               e.target.style.display = 'none'

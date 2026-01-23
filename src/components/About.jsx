@@ -17,7 +17,10 @@ const About = () => {
                 src="/assets/02.jpeg" 
                 alt={language === 'ar' ? 'شركة ريفال للتوريدات الكهربائية والمقاولات - من نحن' : 'Reval Electrical Supplies & Contracting Company - About Us'} 
                 className="about-image"
+                width="665"
+                height="971"
                 loading="lazy"
+                decoding="async"
               />
               <div className="about-image-overlay"></div>
             </div>

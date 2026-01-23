@@ -141,6 +141,9 @@
   object-fit: contain;
   filter: grayscale(20%);
   transition: filter 0.3s ease;
+  aspect-ratio: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .partner-logo-card:hover .partner-logo {
