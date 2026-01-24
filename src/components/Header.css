@@ -18,15 +18,83 @@
   align-items: center;
 }
 
+.header-container.rtl {
+  direction: rtl;
+}
+
+.header-container.ltr {
+  direction: ltr;
+}
+
 .logo {
   display: flex;
   align-items: center;
+  gap: 0;
+}
+
+.logo-ltr {
+  flex-direction: row;
+}
+
+/* .logo-rtl {
+  flex-direction: row-reverse;
+} */
+
+.main-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-ltr .main-logo-wrapper {
+  padding-right: 1.25rem;
+}
+
+.logo-rtl .main-logo-wrapper {
+  padding-left: 1.25rem;
 }
 
 .logo-image {
   height: 50px;
   width: auto;
   object-fit: contain;
+  display: block;
+}
+
+.partner-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-ltr .partner-logo-wrapper {
+  padding-left: 1.25rem;
+  border-left: 1px solid #e0e0e0;
+}
+
+.logo-rtl .partner-logo-wrapper {
+  padding-right: 1.25rem;
+  border-right: 1px solid #e0e0e0;
+  border-left: none;
+}
+
+.partner-logo-divider {
+  display: none;
+}
+
+.partner-logo {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 80px !important;
+  max-height: 38px !important;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+  filter: grayscale(20%);
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
 }
 
 .nav {
@@ -142,18 +210,60 @@
   .nav-link {
     width: 100%;
     padding: 1rem 1.5rem;
-    text-align: left;
     font-size: 1rem;
     border-bottom: 1px solid #f0f0f0;
     border-radius: 0;
+  }
+
+  .header-container.ltr .nav-link {
+    text-align: right;
+  }
+
+  .header-container.rtl .nav-link {
+    text-align: left;
   }
 
   .nav-link:hover {
     background: #f8f8f8;
   }
 
+  .logo {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .logo-ltr .main-logo-wrapper {
+    padding-left: 0.75rem;
+  }
+
+  .logo-rtl .main-logo-wrapper {
+    padding-right: 0.75rem;
+  }
+
   .logo-image {
     height: 40px;
+  }
+
+  .logo-ltr .partner-logo-wrapper {
+    padding-left: 0.75rem;
+    border-left: 1px solid #e0e0e0;
+    border-right: none;
+  }
+
+  .logo-rtl .partner-logo-wrapper {
+    padding-right: 0.75rem;
+    border-right: 1px solid #e0e0e0;
+    border-left: none;
+  }
+
+  .partner-logo-wrapper {
+    gap: 0.75rem;
+  }
+
+  .partner-logo {
+    height: 24px !important;
+    max-width: 65px !important;
+    max-height: 24px !important;
   }
 }
 

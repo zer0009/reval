@@ -18,22 +18,38 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header-container">
-        <div className="logo">
-          <img 
-            src="/assets/Logo.png" 
-            alt={t.companyName} 
-            className="logo-image"
-            width="143"
-            height="70"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            onError={(e) => {
-              console.error('Logo failed to load:', e.target.src)
-              e.target.style.display = 'none'
-            }}
-          />
+      <div className={`header-container ${language === 'ar' ? 'rtl' : 'ltr'}`}>
+        <div className={`logo ${language === 'ar' ? 'logo-rtl' : 'logo-ltr'}`}>
+          <div className="main-logo-wrapper">
+            <img 
+              src="/assets/Logo.png" 
+              alt={t.companyName} 
+              className="logo-image"
+              width="143"
+              height="70"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              onError={(e) => {
+                console.error('Logo failed to load:', e.target.src)
+                e.target.style.display = 'none'
+              }}
+            />
+          </div>
+          <div className="partner-logo-wrapper">
+            <div className="partner-logo-divider"></div>
+            <img 
+              src="/assets/brands/schneider/Schneider_Electric_2007.svg.png" 
+              alt="Schneider Electric" 
+              className="partner-logo"
+              loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                console.error('Partner logo failed to load:', e.target.src)
+                e.target.style.display = 'none'
+              }}
+            />
+          </div>
         </div>
         <button 
           className="mobile-menu-toggle"

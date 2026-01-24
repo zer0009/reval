@@ -138,7 +138,7 @@ export const content = {
     }
   },
   en: {
-    companyName: 'Reval Electrical Supplies & Contracting',
+    companyName: 'Reval For Electrical Supplies & Contracting',
     companyNameShort: 'Reval',
     taglines: [
       'Your Partner in Success',
