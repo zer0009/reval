@@ -156,13 +156,13 @@ export const content = {
       contact: 'Contact'
     },
     hero: {
-      title: 'Reval Electrical Supplies',
+      title: 'Reval For Electrical Supplies',
       subtitle: 'Your Trusted Partner in Electrical Supplies',
       description: 'We provide integrated solutions in electrical supplies with the highest standards of quality and efficiency'
     },
     about: {
       title: 'About Us',
-      paragraph1: 'Reval Electrical Supplies was established in 2022 as one of the leading companies in the field of electrical material supplies within the Egyptian market.',
+      paragraph1: 'Reval For Electrical Supplies was established in 2022 as one of the leading companies in the field of electrical material supplies within the Egyptian market.',
       paragraph2: 'Since its inception, the company has been committed to providing comprehensive solutions distinguished by high quality, strict adherence to technical specifications, and precision in execution, with a constant focus on achieving customer satisfaction and building long-term partnerships based on trust and credibility.',
       paragraph3: 'Reval provides all project requirements of electrical materials and components from top local and international brands, maintaining high performance standards and a prompt response to market needs.',
       paragraph4: 'Through its commitment to professionalism, flexibility, and competitive pricing, the company has earned the trust of major contractors and engineering firms across Egypt.',
@@ -240,7 +240,7 @@ export const content = {
     },
     partners: {
       title: 'Our Success Partners',
-      subtitle: 'Reval Electrical Supplies Company is proud of its cooperation with a selection of the largest commercial brands in the field of electricity and energy, to ensure the provision of high-quality and efficient products that meet the needs of our customers in all projects',
+      subtitle: 'Reval For Electrical Supplies Company is proud of its cooperation with a selection of the largest commercial brands in the field of electricity and energy, to ensure the provision of high-quality and efficient products that meet the needs of our customers in all projects',
       cablesTitle: 'Cables',
       panelsTitle: 'Panels & Circuit Breakers',
       wiringTitle: 'Wiring Devices',
@@ -271,7 +271,7 @@ export const content = {
       }
     },
     footer: {
-      text: '© 2026 Reval Electrical Supplies. All rights reserved.',
+      text: '© 2026 Reval For Electrical Supplies. All rights reserved.',
       established: 'Established in 2022'
     }
   }
