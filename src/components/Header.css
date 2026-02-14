@@ -81,7 +81,7 @@
   display: none;
 }
 
-.partner-logo {
+.header-partner-logo {
   height: 38px !important;
   width: auto !important;
   max-width: 80px !important;
@@ -92,7 +92,7 @@
   filter: grayscale(20%);
 }
 
-.partner-logo:hover {
+.header-partner-logo:hover {
   opacity: 1;
   filter: grayscale(0%);
 }
@@ -260,10 +260,9 @@
     gap: 0.75rem;
   }
 
-  .partner-logo {
+  .header-partner-logo {
     height: 24px !important;
     max-width: 65px !important;
     max-height: 24px !important;
   }
 }
-

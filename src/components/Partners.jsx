@@ -1,6 +1,7 @@
 import { useLanguage } from '../context/LanguageContext'
 import { useBrand } from '../context/BrandContext'
 import { content } from '../data/content'
+import PartnerCategory from './PartnerCategory'
 import './Partners.css'
 
 const Partners = () => {
@@ -138,237 +139,61 @@ const Partners = () => {
           <p className="partners-subtitle">{t.partners.subtitle}</p>
         </div>
         
-        <div className="partners-cables-section">
-          <h3 className="cables-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.cablesTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {cablesLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Cable Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.cablesTitle} 
+          logos={cablesLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-panels-section">
-          <h3 className="panels-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.panelsTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {panelsLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Panel Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.panelsTitle} 
+          logos={panelsLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-wiring-section">
-          <h3 className="wiring-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.wiringTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {wiringLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Wiring Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.wiringTitle} 
+          logos={wiringLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-pvc-section">
-          <h3 className="pvc-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.pvcTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {pvcLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`PVC Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.pvcTitle} 
+          logos={pvcLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-emt-section">
-          <h3 className="emt-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.emtTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {emtLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`EMT Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.emtTitle} 
+          logos={emtLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-data-cables-section">
-          <h3 className="data-cables-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.dataCablesTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {dataCablesLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Data Cable Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.dataCablesTitle} 
+          logos={dataCablesLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-insulation-section">
-          <h3 className="insulation-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.insulationTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {insulationLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Insulation Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.insulationTitle} 
+          logos={insulationLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
 
-        <div className="partners-air-conditioning-section">
-          <h3 className="air-conditioning-title">
-            <svg className="lightning-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 2v11h3v9l7-12h-4l4-8z" fill="currentColor"/>
-            </svg>
-            {t.partners.airConditioningTitle}
-          </h3>
-          <div className="partners-logos-grid">
-            {airConditioningLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="partner-logo-card"
-                onClick={() => handleLogoClick(logo)}
-                style={{ cursor: detectBrandFromLogo(logo) ? 'pointer' : 'default' }}
-              >
-                <img 
-                  src={logo} 
-                  alt={`Air Conditioning Partner ${index + 1}`}
-                  className="partner-logo"
-                  width="210"
-                  height="140"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PartnerCategory 
+          title={t.partners.airConditioningTitle} 
+          logos={airConditioningLogos} 
+          onLogoClick={handleLogoClick} 
+          detectBrand={detectBrandFromLogo} 
+        />
       </div>
     </section>
   )

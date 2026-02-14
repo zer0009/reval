@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useLayoutEffect } from 'react'
 
 const LanguageContext = createContext()
 
@@ -13,10 +13,11 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     // Default to Arabic, or get from localStorage
-    return localStorage.getItem('language') || 'ar'
+    const saved = localStorage.getItem('language')
+    return (saved === 'en' || saved === 'ar') ? saved : 'ar'
   })
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Update HTML dir and lang attributes
     document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr')
     document.documentElement.setAttribute('lang', language)

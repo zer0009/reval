@@ -43,10 +43,21 @@ img {
 
 [dir="rtl"] {
   font-family: 'Cairo', sans-serif;
+  direction: rtl;
 }
 
 [dir="ltr"] {
   font-family: 'Inter', sans-serif;
+  direction: ltr;
+}
+
+/* Ensure proper text alignment based on direction */
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="ltr"] body {
+  text-align: left;
 }
 
 .App {

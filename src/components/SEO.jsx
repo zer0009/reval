@@ -39,10 +39,6 @@ const SEO = () => {
     }
     metaKeywords.setAttribute('content', keywords)
 
-    // Update language and direction
-    document.documentElement.lang = language === 'ar' ? 'ar' : 'en'
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
-
     // Open Graph tags
     const ogTags = [
       { property: 'og:title', content: t.companyName },

@@ -28,7 +28,7 @@ const Header = () => {
               width="143"
               height="70"
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
               onError={(e) => {
                 console.error('Logo failed to load:', e.target.src)
@@ -41,7 +41,7 @@ const Header = () => {
             <img 
               src="/assets/brands/schneider/Schneider_Electric_2007.svg.png" 
               alt="Schneider Electric" 
-              className="partner-logo"
+              className="header-partner-logo"
               loading="lazy"
               decoding="async"
               onError={(e) => {
@@ -92,4 +92,3 @@ const Header = () => {
 }
 
 export default Header
-

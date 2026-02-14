@@ -35,88 +35,118 @@
   text-align: justify;
 }
 
-.partners-cables-section,
-.partners-panels-section,
-.partners-wiring-section,
-.partners-pvc-section,
-.partners-emt-section,
-.partners-data-cables-section,
-.partners-insulation-section,
-.partners-air-conditioning-section {
+/* Partner Category Styles */
+.partner-category {
   margin-top: 4rem;
+  position: relative;
 }
 
-.cables-title,
-.panels-title,
-.wiring-title,
-.pvc-title,
-.emt-title,
-.data-cables-title,
-.insulation-title,
-.air-conditioning-title {
+.category-header {
   font-size: 1.75rem;
   font-weight: 700;
   color: #FF6600;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   text-align: center;
-  justify-content: center;
 }
 
-.cables-title .lightning-icon,
-.panels-title .lightning-icon,
-.wiring-title .lightning-icon,
-.pvc-title .lightning-icon,
-.emt-title .lightning-icon,
-.data-cables-title .lightning-icon,
-.insulation-title .lightning-icon,
-.air-conditioning-title .lightning-icon {
+.category-header .lightning-icon {
   width: 24px;
   height: 24px;
 }
 
+/* Carousel Styles */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.carousel-arrow {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #FF6600;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: #FF6600;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.carousel-arrow:focus {
+  outline: 2px solid #FF6600;
+  outline-offset: 2px;
+}
+
+/* Logos Grid */
 .partners-logos-grid {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  justify-content: center;
   align-items: center;
+  flex: 1;
+  /* Ensure consistent spacing */
+  margin: 0 0.5rem;
+}
+
+/* Center alignment if few logos */
+.partners-logos-grid:not(:has(.partner-logo-card:nth-child(5))) {
+  justify-content: center;
 }
 
 .partners-logos-grid::-webkit-scrollbar {
   display: none;
 }
 
-/* When there are 5 or more logos, allow left-aligned scrolling */
-.partners-logos-grid:has(.partner-logo-card:nth-child(5)) {
-  justify-content: flex-start;
-}
-
+/* Logo Card */
 .partner-logo-card {
   background: transparent;
   padding: 0;
-  border-radius: 0;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
-  min-width: 160px;
+  /* Fixed dimensions to ensure consistent container size */
+  height: 200px;
+  width: 250px;
   flex-shrink: 0;
-  border: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .partner-logo-card:hover {
   transform: translateY(-5px);
+  background: #fafafa;
+  border-color: #f0f0f0;
 }
 
 .partner-logo-card[style*="pointer"] {
@@ -126,23 +156,27 @@
 .partner-logo-card[style*="pointer"]:hover::after {
   content: '👆';
   position: absolute;
-  bottom: -25px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
-  opacity: 0.7;
+  opacity: 0.8;
+  animation: bounce 1s infinite;
 }
 
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+/* Logo Image */
 .partner-logo {
-  max-width: 100%;
-  max-height: 70px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   filter: grayscale(20%);
   transition: filter 0.3s ease;
-  aspect-ratio: auto;
-  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-optimize-contrast; /* Webkit (Chrome, Safari, iOS) */
   image-rendering: crisp-edges;
 }
 
@@ -150,6 +184,7 @@
   filter: grayscale(0%);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .partners {
     padding: 3rem 0;
@@ -180,55 +215,42 @@
     text-align: left;
   }
 
-  .partners-cables-section,
-  .partners-panels-section,
-  .partners-wiring-section,
-  .partners-pvc-section,
-  .partners-emt-section,
-  .partners-data-cables-section,
-  .partners-insulation-section,
-  .partners-air-conditioning-section {
+  .partner-category {
     margin-top: 3rem;
   }
-
-  .cables-title,
-  .panels-title,
-  .wiring-title,
-  .pvc-title,
-  .emt-title,
-  .data-cables-title,
-  .insulation-title,
-  .air-conditioning-title {
-    font-size: 1.25rem;
-    flex-wrap: wrap;
-    gap: 0.4rem;
+  
+  .category-header {
+    font-size: 1.5rem;
   }
 
-  .cables-title .lightning-icon,
-  .panels-title .lightning-icon,
-  .wiring-title .lightning-icon,
-  .pvc-title .lightning-icon,
-  .emt-title .lightning-icon,
-  .data-cables-title .lightning-icon,
-  .insulation-title .lightning-icon,
-  .air-conditioning-title .lightning-icon {
-    width: 20px;
-    height: 20px;
+  /* Adjust carousel for mobile */
+  .carousel-container {
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    /* Hide arrows on very small screens if user prefers swiping, 
+       but user requested arrows. Let's keep them but smaller. */
+    background: rgba(255, 255, 255, 0.9);
   }
 
   .partners-logos-grid {
-    gap: 1.25rem;
-    padding: 0.5rem 0;
+    gap: 1.5rem;
   }
 
   .partner-logo-card {
+    height: 160px;
+    width: 200px;
     padding: 0;
-    min-height: 100px;
-    min-width: 140px;
+    min-height: unset; /* Override previous min-height if set */
+    min-width: unset;
   }
 
   .partner-logo {
-    max-height: 60px;
+    /* Ensure image fills the mobile container */
+    max-height: none; 
   }
 }
-
